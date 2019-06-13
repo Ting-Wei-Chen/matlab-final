@@ -17,11 +17,12 @@ for i=1:1:row-1
             for k=i+1:1:row
                 temp=old(k,j)/old(i,j);
                 old=add(old,i,k,-temp);
-                L=add(L,i,k,temp);
+                L=add(L,i,k,-temp);
             end
             break
         end
     end
 end
+L=inv(L);
 U=old;
 end
