@@ -2,7 +2,7 @@ clear
 for i=1:1:8
     while true
         A=rand(2^i);
-        if abs(det(A))<0.0001
+        if abs(det(A))<0.1
             continue
         else
             break
